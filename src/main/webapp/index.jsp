@@ -8,7 +8,7 @@
 <body>
 <h1><%= "Hello World!" %></h1>
 <br/>
-<a href="hello-servlet">Hello Servlet</a>
-<a href="say-my-name">Say my name</a>
+<a class="d-block mx-4" href="hello-servlet">Hello Servlet</a>
+<a class="d-block mx-4" href="say-my-name">Say my name</a>
 </body>
 </html>
