@@ -4,5 +4,5 @@
 
 - Maven
 - Tomcat
--JSP
+- JSP
 - Bootstrap
