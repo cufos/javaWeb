@@ -25,4 +25,16 @@ public class Name extends HttpServlet {
 
         view.forward(request,response);
     }
+
+    public void DoPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException,IOException{
+        String pageName = "form.jsp";
+
+        String name = request.getParameter("name");
+
+        request.setAttribute("name",name);
+
+        RequestDispatcher page = request.getRequestDispatcher(pageName);
+        page.forward(request,response);
+
+    }
 }
