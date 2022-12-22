@@ -21,20 +21,20 @@ public class Name extends HttpServlet {
 
         request.setAttribute("name",name);
 
-        RequestDispatcher view = request.getRequestDispatcher(jspPage);
+        RequestDispatcher page = request.getRequestDispatcher(jspPage);
 
-        view.forward(request,response);
+        page.forward(request,response);
     }
 
-    public void DoPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException,IOException{
-        String pageName = "form.jsp";
+    public void doPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException,IOException{
+        String pageName = "name.jsp";
 
-        String name = request.getParameter("name");
+       // String name = request.getParameter("name");
+        String name = "Junior";
 
         request.setAttribute("name",name);
 
         RequestDispatcher page = request.getRequestDispatcher(pageName);
         page.forward(request,response);
-
     }
 }
