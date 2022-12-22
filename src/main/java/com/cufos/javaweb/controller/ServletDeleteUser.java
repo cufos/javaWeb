@@ -26,6 +26,8 @@ public class ServletDeleteUser extends HttpServlet {
 
     Integer id = Integer.parseInt(request.getParameter("cancel"));
 
+    System.out.println(id);
+
 
     try {
       userDAO.deleteUser(id);

@@ -37,13 +37,13 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
-<form method="post" action="ServletInsertUser">
-  <div class="mb-3 w-50">
-    <label for="cancel" class="form-label">Age</label>
-    <input type="number" class="form-control" id="cancel" name="cancel">
-  </div>
-  <button type="submit" class="btn btn-danger">Delete user</button>
-</form>
+  <form method="post" action="ServletDeleteUser">
+    <div class="mb-3">
+      <label  class="form-label">Delete an user</label>
+      <input type="number" class="form-control" name="cancel" required="required">
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
 
 </body>
 </html>
