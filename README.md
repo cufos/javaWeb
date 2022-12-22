@@ -1,4 +1,8 @@
 # Java repository for pratice purpose
 
-## We are using JSP, Maven and Tomcat
+## We are using 
 
+- Maven
+- Tomcat
+-JSP
+- Bootstrap
