@@ -26,10 +26,9 @@ public class ServletInsertUser<Int> extends HttpServlet {
     String name = request.getParameter("name");
     String email = request.getParameter("email");
     String country = request.getParameter("country");
-    String age = request.getParameter("age");
+    Integer age = Integer.parseInt(request.getParameter("age"));
 
-    User newUser = new User(name,email,country);
-
+    User newUser = new User(name, email, country, age);
     try {
       userDAO.insertUser(newUser);
     } catch (SQLException e) {
@@ -37,6 +36,10 @@ public class ServletInsertUser<Int> extends HttpServlet {
     } catch (ClassNotFoundException e) {
       throw new RuntimeException(e);
     }
-    response.sendRedirect("userInserito.jsp");
+
+
+    request.setAttribute("msg", "L'utente è stato inserito correttamente!");
+    RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
+    dispatcher.forward(request,response);
   }
 }

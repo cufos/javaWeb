@@ -27,6 +27,9 @@ public class User {
     this.age = age;
   }
 
+  public User(String name, String email, String country, Integer age) {
+  }
+
   public int getId() {
     return id;
   }
@@ -55,7 +58,8 @@ public class User {
   public int getAge() {
     return age;
   }
-  public void getAge(int country) {
+
+  public void setAge(int age) {
     this.age = age;
   }
 }
