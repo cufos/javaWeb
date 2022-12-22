@@ -1,7 +1,6 @@
 package com.cufos.javaweb.controller;
-
 import com.cufos.javaweb.dao.UserDAO;
-import com.cufos.javaweb.model.User;
+
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
@@ -9,8 +8,9 @@ import jakarta.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "ServletInsertUser", value = "/ServletInsertUser")
-public class ServletInsertUser<Int> extends HttpServlet {
+
+@WebServlet(name = "ServletDeleteUser", value = "/ServletDeleteUser")
+public class ServletDeleteUser extends HttpServlet {
   private UserDAO userDAO;
   public void init() {
     userDAO = new UserDAO();
@@ -23,22 +23,18 @@ public class ServletInsertUser<Int> extends HttpServlet {
 
   @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-    String name = request.getParameter("name");
-    String email = request.getParameter("email");
-    String country = request.getParameter("country");
-    Integer eta = Integer.parseInt(request.getParameter("eta"));
 
-    User newUser = new User(name, email, country, eta);
+    Integer id = Integer.parseInt(request.getParameter("cancel"));
+
+
     try {
-      userDAO.insertUser(newUser);
+      userDAO.deleteUser(id);
     } catch (SQLException e) {
-      throw new RuntimeException(e);
-    } catch (ClassNotFoundException e) {
       throw new RuntimeException(e);
     }
 
 
-    request.setAttribute("msg", "L'utente è stato inserito correttamente!");
+    request.setAttribute("msg_delete", "L'utente è stato eliminato dal DB!");
     RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
     dispatcher.forward(request,response);
   }

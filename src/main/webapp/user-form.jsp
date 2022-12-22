@@ -23,8 +23,8 @@
         <input type="text" class="form-control" id="country" name="country">
       </div>
       <div class="mb-3">
-        <label for="age" class="form-label">Age</label>
-        <input type="number" class="form-control" id="age" name="age">
+        <label for="eta" class="form-label">Age</label>
+        <input type="number" class="form-control" id="eta" name="eta">
       </div>
       <label for="email" class="form-label">Email address</label>
       <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp">
@@ -36,5 +36,14 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
+
+<form method="post" action="ServletInsertUser">
+  <div class="mb-3 w-50">
+    <label for="cancel" class="form-label">Age</label>
+    <input type="number" class="form-control" id="cancel" name="cancel">
+  </div>
+  <button type="submit" class="btn btn-danger">Delete user</button>
+</form>
+
 </body>
 </html>

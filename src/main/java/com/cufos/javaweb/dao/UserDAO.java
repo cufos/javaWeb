@@ -31,13 +31,13 @@ public class UserDAO {
 
   public void insertUser(User user) throws SQLException, ClassNotFoundException {
     System.out.println(INSERT_USERS_SQL);
-    // try-with-resource statement will auto close the connection.
+
     try (Connection connection = getConnection();
          PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
       preparedStatement.setString(1, user.getName());
       preparedStatement.setString(2, user.getEmail());
       preparedStatement.setString(3, user.getCountry());
-      preparedStatement.setInt(4, user.getAge());
+      preparedStatement.setInt(4, user.getEta());
       System.out.println(preparedStatement);
       preparedStatement.executeUpdate();
     } catch (SQLException e) {
@@ -62,7 +62,7 @@ public class UserDAO {
 //        String email = rs.getString("email");
 //        String country = rs.getString("country");
 //        Int age = (Int) rs.getString("age");
-//        user = new User(id, name, email, country, (Integer) age);
+//        user = new User(id, name, email, country, (Integer) eta);
 //      }
 //    } catch (SQLException e) {
 //      printSQLException(e);
