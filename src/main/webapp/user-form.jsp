@@ -12,6 +12,10 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
+<jsp:include page="navbar.jsp"></jsp:include>
+<main class="container">
+
+
   <form class="w-50" method="post" action="ServletInsertUser">
     <div class="mb-3">
       <div class="mb-3">
@@ -37,13 +41,13 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
-  <form method="post" action="ServletDeleteUser">
+  <form class="container w-50 mt-5" method="post" action="ServletDeleteUser">
     <div class="mb-3">
-      <label  class="form-label">Delete an user</label>
+      <label  class="form-label">Delete an user by his ID</label>
       <input type="number" class="form-control" name="cancel" required="required">
     </div>
     <button type="submit" class="btn btn-danger">Delete</button>
   </form>
-
+</main>
 </body>
 </html>

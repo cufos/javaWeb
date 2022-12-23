@@ -6,12 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 <body>
-    <header class="bg-light py-2">
-        <div class="container m-auto justify-content-between d-flex">
-            <h1>JSP - Bootstrap</h1>
-            <jsp:include page="navbar.jsp"></jsp:include>
-        </div>
-    </header>
+<jsp:include page="navbar.jsp"></jsp:include>
+
     <main class="container">
         <jsp:include page="form.jsp"></jsp:include>
         <br/>

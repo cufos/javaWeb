@@ -28,9 +28,7 @@ public class Name extends HttpServlet {
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException,IOException{
         String pageName = "name.jsp";
-
-       // String name = request.getParameter("name");
-        String name = "Junior";
+        String name = request.getParameter("name");
 
         request.setAttribute("name",name);
 

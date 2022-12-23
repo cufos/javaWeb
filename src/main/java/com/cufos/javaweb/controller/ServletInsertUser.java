@@ -38,8 +38,6 @@ public class ServletInsertUser<Int> extends HttpServlet {
     }
 
 
-    request.setAttribute("msg", "L'utente è stato inserito correttamente!");
-    RequestDispatcher dispatcher = request.getRequestDispatcher("user-form.jsp");
-    dispatcher.forward(request,response);
+    response.sendRedirect("userInserito.jsp");
   }
 }

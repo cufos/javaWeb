@@ -17,10 +17,6 @@ public class Form extends HttpServlet {
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException,IOException{
     String jspPage = "name.jsp";
 
-    String name = request.getParameter("name");
-
-    request.setAttribute("name",name);
-
     RequestDispatcher page = request.getRequestDispatcher(jspPage);
 
     page.forward(request,response);
@@ -28,7 +24,6 @@ public class Form extends HttpServlet {
 
   public void doPost(HttpServletRequest request, HttpServletResponse response)  throws ServletException,IOException{
     String pageName = "name.jsp";
-
     String name = request.getParameter("name");
 
     request.setAttribute("name",name);
