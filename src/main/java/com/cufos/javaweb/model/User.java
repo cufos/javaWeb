@@ -6,18 +6,25 @@ public class User {
   protected String name;
   protected String email;
   protected String country;
-  protected int eta;
+  protected int age;
 
   public User() {
   }
 
-  public User(String name, String email, String country, int eta) {
+  public User(String name, String email, String country, int age) {
     this.name = name;
     this.email = email;
     this.country = country;
-    this.eta = eta;
+    this.age = age;
   }
 
+  public User(int id, String name, String email, String country, int age) {
+    this.id = id;
+    this.name = name;
+    this.email = email;
+    this.country = country;
+    this.age = age;
+  }
 
 
   public int getId() {
@@ -45,11 +52,11 @@ public class User {
     this.country = country;
   }
 
-  public int getEta() {
-    return eta;
+  public int getAge() {
+    return age;
   }
 
-  public void setEta(int eta) {
-    this.eta = eta;
+  public void setAge(int age) {
+    this.age = age;
   }
 }
