@@ -7,10 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-  <title>Inserito</title>
-</head>
+<title>Success</title>
+<jsp:include page="style.jsp"></jsp:include>
 <body>
-<h1>Utente Inserito</h1>
+<jsp:include page="navbar.jsp"></jsp:include>
+<h1>Utente inserito</h1>
 </body>
 </html>
